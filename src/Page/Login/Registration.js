@@ -38,7 +38,7 @@ const Registration = () => {
               Date,
               Profession,
             };
-            fetch("http://localhost:5000/all-user", {
+            fetch("https://job-task-server-dun.vercel.app/all-user", {
               method: "POST",
               headers: {
                 "content-type": "application/json",

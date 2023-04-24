@@ -7,9 +7,9 @@ const Home = () => {
   const { data: myInformation = [], isLoading } = useQuery({
     queryKey: ["myinfo", user?.email],
     queryFn: () =>
-      fetch(`http://localhost:5000/myinfo?email=${user.email}`).then((res) =>
-        res.json().catch(console.error())
-      ),
+      fetch(
+        `https://job-task-server-dun.vercel.app/myinfo?email=${user.email}`
+      ).then((res) => res.json().catch(console.error())),
   });
   console.log(myInformation);
   const { Date, Email, Name, _id, Profession } = myInformation;
